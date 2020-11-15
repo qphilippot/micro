@@ -6,6 +6,8 @@ class DBHelper {
         this.helpers = {
             [DBHelper.DB_TYPE.DYNAMO]: require('./helpers/dynamo.helper')
         };
+
+        this.DB_TYPE = { ...DBHelper.DB_TYPE };
     }
 
     /**

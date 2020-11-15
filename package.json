@@ -1,0 +1,24 @@
+{
+  "name": "aonoro-immo",
+  "version": "1.0.0",
+  "description": "Tools to quickly build micro server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qphi/micro.git"
+  },
+
+  "author": "qphilippot",
+  "license": "ISC",
+ 
+  "homepage": "https://github.com/qphi/micro#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1"
+  }
+}

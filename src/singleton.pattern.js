@@ -11,7 +11,7 @@ class Singleton {
     }
 
     static create(type) {
-        const name = type.constructor.name;
+        const name = type.name;
         let instance = singletonList[name] || null; 
         if (instance === null) {
             instance = new type();

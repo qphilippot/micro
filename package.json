@@ -1,5 +1,5 @@
 {
-  "name": "aonoro-immo",
+  "name": "micro",
   "version": "1.0.0",
   "description": "Tools to quickly build micro server",
   "main": "index.js",

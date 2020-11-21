@@ -25,7 +25,7 @@ class DBHelper {
         }
 
         else {
-            throw new DBHelperNotFoundException(db_type);
+            throw new DBHelperNotFoundException(db_type || 'undefined');
         }
 
     }

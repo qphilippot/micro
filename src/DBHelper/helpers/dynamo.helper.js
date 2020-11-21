@@ -10,7 +10,7 @@ class DynamoHelper {
      */
     connect(connexionData) {
         // Create new DynamoDB instance
-        const db = new dynamoose.aws.sdk.DynamoDB(credendials);
+        const db = new dynamoose.aws.sdk.DynamoDB(connexionData);
 
         // Set DynamoDB instance to the Dynamoose DDB instance
         dynamoose.aws.ddb.set(ddb);

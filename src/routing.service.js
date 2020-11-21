@@ -1,6 +1,6 @@
 const Singleton = require("./singleton.pattern");
 
-class RoutingService extends Singleton {
+class RoutingService {
     use(app, router) {
         router.forEach(route => {
             const method = (route.method || 'get').toLowerCase();

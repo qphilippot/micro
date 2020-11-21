@@ -13,7 +13,7 @@ class DynamoHelper {
         const db = new dynamoose.aws.sdk.DynamoDB(connexionData);
 
         // Set DynamoDB instance to the Dynamoose DDB instance
-        dynamoose.aws.ddb.set(ddb);
+        dynamoose.aws.ddb.set(db);
         return db;
     }
 }

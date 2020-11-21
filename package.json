@@ -1,6 +1,6 @@
 {
   "name": "micro",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tools to quickly build micro server",
   "main": "index.js",
   "scripts": {

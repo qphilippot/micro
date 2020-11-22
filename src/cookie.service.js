@@ -40,6 +40,14 @@ class CookieService {
 
         return request.__micro.cookies[name] || null;
     }
+
+    set(response, name, value, options = {}) {
+        response.cookie(
+            name,
+            value,
+            options
+        );
+    }
 }
 
 module.exports = Singleton.create(CookieService);

@@ -35,7 +35,7 @@ class CookieService {
             typeof request.__micro === 'undefined' ||
             typeof request.__micro.cookies === 'undefined'
         ) {
-            buildCookies(request);
+            this.buildCookies(request);
         }
 
         return request.__micro.cookies[name] || null;

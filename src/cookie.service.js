@@ -4,20 +4,19 @@ const Singleton = require("./singleton.pattern");
 
 class CookieService {
     buildCookies(request) {
-        if (
-            typeof request.headers !== 'undefined' &&
-            typeof request.headers.cookie === 'undefined'
-        ) {
-            if (typeof request.__micro === 'undefined') {
-                request.__micro = {};
-            }
-
-            if (typeof request.__micro.cookies === 'undefined') {
-                request.__micro.cookies = {};
-            }
+        if (typeof request.__micro === 'undefined') {
+            request.__micro = {};
         }
 
-        else {
+        if (typeof request.__micro.cookies === 'undefined') {
+            request.__micro.cookies = {};
+        }
+
+
+        if (
+            typeof request.headers !== 'undefined' &&
+            typeof request.headers.cookie !== 'undefined'
+        ) {
             // https://alligator.io/nodejs/express-cookies/
             const rawCookies = request.headers.cookie.split('; ');
             const parsedCookies = {};
@@ -25,7 +24,7 @@ class CookieService {
                 const parsedCookie = rawCookie.split('=');
                 parsedCookies[parsedCookie[0]] = parsedCookie[1];
             });
-
+  
             request.microservice_cookies = parsedCookies;
         }
     }

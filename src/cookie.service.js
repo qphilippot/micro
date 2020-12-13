@@ -25,7 +25,7 @@ class CookieService {
                 parsedCookies[parsedCookie[0]] = parsedCookie[1];
             });
   
-            request.microservice_cookies = parsedCookies;
+            request.__micro.cookies = parsedCookies;
         }
     }
 

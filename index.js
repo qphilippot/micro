@@ -6,6 +6,8 @@ const DBHelper = require('./src/DBHelper/db.helper');
 const CookieService = require('./src/cookie.service');
 const AbstractMethodNotImplementedException = require('./src/AbstractMethodNotImplemented.exception');
 const InstantiateAbstractOrInterfaceException = require('./src/InstantiateAbstractOrInterface.exception');
+const HTTPSignatureVerifierService = require('./src/services/http-signature-verifier.service');
+const HTTPSignatureSignerService = require('./src/services/http-signature-signer.service');
 
 module.exports = {
     BaseController,
@@ -15,5 +17,7 @@ module.exports = {
     CookieService,
     DBHelper,
     AbstractMethodNotImplementedException,
-    InstantiateAbstractOrInterfaceException
+    InstantiateAbstractOrInterfaceException,
+    HTTPSignatureVerifierService,
+    HTTPSignatureSignerService
 };

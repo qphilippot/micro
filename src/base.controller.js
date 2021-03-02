@@ -7,6 +7,18 @@ class BaseController {
         }
     }
 
+    getActions() {
+        let props = [];
+        let obj = this;
+        do {
+            props = props.concat(Object.getOwnPropertyNames(obj));
+        } while ((obj = Object.getPrototypeOf(obj)) && obj !== BaseController.prototype);
+
+        return props.sort().filter((e, i, arr) => {
+            if (e!=arr[i+1] && typeof this[e] == 'function') return true;
+        });
+    }
+
     getMethod(methodName) {
         if (typeof this[methodName] === 'function') {
             return this[methodName].bind(this);

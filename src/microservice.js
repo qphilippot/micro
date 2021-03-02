@@ -21,6 +21,13 @@ class MicroService {
         this.app.use(helmet());
     }
 
+    /**
+     * @param {BaseController} controller
+     */
+    addController(controller) {
+
+    }
+
     getMethod(methodName) {
         if (typeof this[methodName] === 'function') {
             return this[methodName].bind(this);
